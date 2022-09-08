@@ -34,3 +34,8 @@ li{
   margin-left: 1rem;
   
 }
+li a{
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
