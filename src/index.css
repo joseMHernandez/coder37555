@@ -7,9 +7,6 @@
 html{
   font-size: 62.5%;
 }
-body {
-  background-color: black;
-}
 
 .nav{
   display: flex;
@@ -38,4 +35,8 @@ li a{
   text-decoration: none;
   color: #000;
   cursor: pointer;
+}
+
+.header{
+  background-color: red;
 }

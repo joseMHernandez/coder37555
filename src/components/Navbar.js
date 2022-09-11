@@ -1,17 +1,20 @@
 import React from 'react'
+import Logo from './Logo/Logo';
 
 const Navbar = () => {
   return (
     <>
     <nav className='nav'>
         
-        <div className='nav-logo'>Logo</div>
+        <div className='nav-logo'>eShoes</div>
         
         <div className='nav-link'>
         <li><a href='#'>Home</a></li>
         <li><a href='#'>About</a></li>
         <li><a href='#'>Contact</a></li>
+        <Logo />
         </div>
+
     </nav>
     
     </>
