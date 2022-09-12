@@ -8,7 +8,7 @@ function App() {
     <div className="App">
     <Navbar/>
    <Header/>
-  <ItemListContainer/>
+  <ItemListContainer greeting='esta es mi pagina web'/>
    <Card/>
    <Button/>
     </div>

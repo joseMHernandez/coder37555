@@ -1,17 +1,19 @@
 import React from "react";
 import Card from "./Card";
 
-function ItemListContainer() {
+function ItemListContainer(props) {
+  const {greeting} = props
   return (
     <div>
-      <h1>{/* mostramos el greeting recibido por PROPS */}</h1>  
+      <h1 className="greeting">{greeting}</h1>  
       <div className="main-container">
+
         <Card
           price={100}
           title="Producto 1"
           detail="Lorem ipsum" 
           img="https://http2.mlstatic.com/D_Q_NP_2X_615211-MLA51428564462_092022-AB.webp"
-          greeting='*greeting'
+          
         />
         <Card
           price={500}

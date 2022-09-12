@@ -3,6 +3,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.greeting{
+  text-align: center;
+}
 
 .card-img{
     width: 20.8rem;
