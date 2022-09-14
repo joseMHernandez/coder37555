@@ -9,8 +9,6 @@ function App() {
     <Navbar/>
    <Header/>
   <ItemListContainer greeting='esta es mi pagina web'/>
-   <Card/>
-   <Button/>
     </div>
   );
 }

@@ -2,7 +2,9 @@ import React from "react";
 import Card from "./Card";
 
 function ItemListContainer(props) {
+
   const {greeting} = props
+
   return (
     <div>
       <h1 className="greeting">{greeting}</h1>  
@@ -28,6 +30,7 @@ function ItemListContainer(props) {
           img="https://http2.mlstatic.com/D_Q_NP_2X_809249-MLA51428561901_092022-AB.webp"
         />
       </div>
+
     </div> 
   );
 }

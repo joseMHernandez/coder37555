@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
+import ItemCount from "../Button/ItemCount";
 import "./card.css";
 import '../Button/button.css'
 
@@ -18,6 +19,9 @@ function Card(props) {
        
       </div>
       <Button>Ver más</Button>
+
+      <ItemCount stock={15} initial={1}/>
+
     </div>
   );
 }

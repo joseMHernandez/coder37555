@@ -4,4 +4,33 @@
     max-width: 15rem;
     background-color: rgb(97, 150, 220);
     border-radius:  .5rem; 
+    cursor: pointer;
+  }
+
+  .btn-count{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  .btn-count-buttons{
+    display: flex;
+    justify-content: space-between;
+   
+  }
+
+  .btn-cart{
+    cursor: pointer;
+    background-color: aquamarine;
+    color: black;
+    margin-top: 3rem;
+  }
+
+  .increment, .decrement, h1{
+    font-size: 2.5rem;
+    cursor: pointer;
+
+  }
+  .increment, .decrement{
+    cursor: pointer;
   }
