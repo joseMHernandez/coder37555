@@ -2,7 +2,7 @@ import Navbar  from './components/Navbar';
 import Header from './components/Header/Header';
 import Card from './components/Products/Card';
 import Button from './components/Button/Button';
-import ItemListContainer from './components/Products/ItemListContainer.js';
+import ItemListContainer from './components/Products/ItemListContainer.js.js';
 function App() {
   return (
     <div className="App">

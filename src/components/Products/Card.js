@@ -5,7 +5,7 @@ import "./card.css";
 import '../Button/button.css'
 
 function Card(props) {
-  let { price, title, img, detail} = props;
+  let { price, title, img, detail, onAdd} = props;
 
   return (
     <div className="card">
@@ -20,7 +20,7 @@ function Card(props) {
       </div>
       <Button>Ver más</Button>
 
-      <ItemCount stock={15} initial={1}/>
+      <ItemCount stock={15} initial={1} onAdd={onAdd}/>
 
     </div>
   );

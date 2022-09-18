@@ -4,10 +4,16 @@ const ItemCount = ({stock, initial}) => {
 
     const [count, setcount] = useState(initial)
 
+
+
+    const onAdd = () =>{
+alert(`agregaste ${count} productos al carrito`)
+    }
     const increment = () => {
         if(count < stock){
             setcount(count + 1)
-        }  }
+        } 
+     }
 
     const decrement = () => {
         if(count > 1)
@@ -25,7 +31,7 @@ setcount(count-1)
 
     </div>
     
-    <button className='btn-cart'>Add Cart</button>
+    <button onClick={onAdd}  className='btn-cart'>Add Cart</button>
 </div>
 
 </>
