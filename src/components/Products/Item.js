@@ -4,10 +4,9 @@ import ItemCount from "../Button/ItemCount";
 import "./card.css";
 import '../Button/button.css'
 
-function Card(props) {
+function Item(props) {
   let { price, title, img, detail, } = props;
   
-
   const onAdd = () =>{
     alert(`agregaste este producto al carrito`)
         }
@@ -32,4 +31,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default Item;

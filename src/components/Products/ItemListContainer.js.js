@@ -1,36 +1,32 @@
-import React from "react";
-import Card from "./Card";
+import ItemList from './ItemList';
+import React, { useEffect, useState } from "react";
+import getItems from '../../services/mockApi';
 
 function ItemListContainer(props) {
+const {greeting} = props
 
-  const {greeting} = props
+let [data, setdata] = useState([])
 
-  return (
+useEffect(()=>{
+  getItems().then(dataResponse => setdata(dataResponse))
+}, [])
+  
+/* 
+--ciclos de Video
+--promesas
+--estado
+--props
+--map
+--key */
+
+return (
     <div>
       <h1 className="greeting">{greeting}</h1>  
       <div className="main-container">
 
-        <Card
-          price={100}
-          title="Producto 1"
-          detail="Lorem ipsum" 
-          img="https://http2.mlstatic.com/D_Q_NP_2X_615211-MLA51428564462_092022-AB.webp"
-          
-        />
-        <Card
-          price={500}
-          title="Otro Producto"
-          detail="Lorem ipsum"
-          img="https://http2.mlstatic.com/D_Q_NP_2X_979339-MLA51390537629_092022-AB.webp"
-        />
-        <Card
-          price={1000}
-          title="Otro Producto más!"
-          detail="Lorem ipsum"
-          img="https://http2.mlstatic.com/D_Q_NP_2X_809249-MLA51428561901_092022-AB.webp"
-        />
-      </div>
+        <ItemList data={data}/>
 
+      </div>
     </div> 
   );
 }
