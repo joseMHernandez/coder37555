@@ -5,8 +5,14 @@ import "./card.css";
 import '../Button/button.css'
 
 function Card(props) {
-  let { price, title, img, detail, onAdd} = props;
+  let { price, title, img, detail, } = props;
+  
 
+  const onAdd = () =>{
+    alert(`agregaste este producto al carrito`)
+        }
+
+        
   return (
     <div className="card">
       <div className="card-img">

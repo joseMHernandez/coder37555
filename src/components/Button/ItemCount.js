@@ -1,14 +1,9 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
     const [count, setcount] = useState(initial)
 
-
-
-    const onAdd = () =>{
-alert(`agregaste ${count} productos al carrito`)
-    }
     const increment = () => {
         if(count < stock){
             setcount(count + 1)
