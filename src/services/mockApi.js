@@ -3,10 +3,10 @@ const data = [
     {
         id: 1,
         title: 'Nike',
-        price: 342,
+        price: '$ 342',
         stock: 4,
         category: 'shoes',
-        detail: 'lorem',
+        detail: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ',
         img: '/assets/img/blue-shoes.jpg'
 
     },
@@ -14,10 +14,10 @@ const data = [
     {
         id: 2,
         title: 'Puma',
-        price: 145,
+        price: '$ 145',
         stock: 13,
         category: 'shoes',
-        detail: 'lorem',
+        detail: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ',
         img: '/assets/img/blue-shoes.jpg'
 
     },
@@ -25,17 +25,17 @@ const data = [
     {
         id: 3,
         title: 'Adidas',
-        price: 212,
+        price: '$ 212',
         stock: 11,
         category: 'shoes',
-        detail: 'lorem',
+        detail: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ',
         img: '/assets/img/blue-shoes.jpg'
 
     }
 
 ]
 
- const getItems = () =>{
+ export const getItems = () =>{
    return new Promise((resolve, reject)=>{
     setTimeout(()=>{
         resolve(data)
@@ -43,4 +43,14 @@ const data = [
    })
 
 }
-export default getItems;
+
+
+
+export const getSingleItems = () =>{
+  return new Promise((resolve, reject)=>{
+   setTimeout(()=>{
+       resolve(data[2])
+   }, 2000)
+  })
+
+}

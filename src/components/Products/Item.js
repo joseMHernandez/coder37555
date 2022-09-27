@@ -7,7 +7,7 @@ import '../Button/button.css'
 function Item(props) {
   let { price, title, img, detail, } = props;
   
-  const onAdd = () =>{
+const onAdd = () =>{
     alert(`agregaste este producto al carrito`)
         }
 

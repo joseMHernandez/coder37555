@@ -1,16 +1,10 @@
-import ItemList from './ItemList';
-import React, { useEffect, useState } from "react";
+import ItemList from '../Products/ItemList';
+//import React, { useEffect, useState } from "react";
 import getItems from '../../services/mockApi';
 
 function ItemListContainer(props) {
-const {greeting} = props
+//const {greeting} = props
 
-let [data, setdata] = useState([])
-
-useEffect(()=>{
-  getItems().then(dataResponse => setdata(dataResponse))
-}, [])
-  
 /* 
 --ciclos de Video
 --promesas
@@ -21,12 +15,12 @@ useEffect(()=>{
 
 return (
     <div>
-      <h1 className="greeting">{greeting}</h1>  
-      <div className="main-container">
+{/*       <h1 className="greeting">{greeting}</h1>  
+ */}      
 
         <ItemList data={data}/>
 
-      </div>
+      
     </div> 
   );
 }
