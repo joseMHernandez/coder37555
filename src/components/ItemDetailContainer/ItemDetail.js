@@ -1,34 +1,41 @@
-import React from 'react';
-import ItemList from '../Products/ItemList';
+import React from 'react'
+//import Item from "../Products/Item";
 import { useEffect, useState } from "react";
 import { getSingleItems } from '../../services/mockApi';
-function ItemListContainer(props) {
-const {greeting} = props
+import {useParams} from 'react-router-dom'
+import '../ItemDetailContainer/itemList.css'
+const ItemDetail = () => {
 
-let [data, setdata] = useState({ })
+let [data, setdata] = useState([])
+
+const {id} = useParams()
+
 
 useEffect(()=>{
-  getSingleItems().then(dataResponse => setdata(dataResponse))
-}, [])
   
-/* 
---ciclos de Video
---promesas
---estado
---props
---map
---key */
+    getSingleItems(id).then(dataResponse => setdata(dataResponse))
 
-return (
-    <div>
-      <h1 className="greeting">{greeting}</h1>  
-      <div className="main-container">
+  
+}, [id])
+  
+  return (
+    <>
+    <div className="main-container">
+    <div className='item-detail'>
+   <img src={data.img} alt={data.title} />
 
-        <ItemList data={data}/>
+   </div>
+   <h1>{data.title}</h1>
+   <h1>{data.price}</h1>
+   <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </h3>
+  
+    </div>
+ 
+   
 
-      </div>
-    </div> 
-  );
+        
+    </>
+  )
 }
 
-export default ItemListContainer;
+export default ItemDetail

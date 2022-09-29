@@ -5,7 +5,7 @@ const data = [
         title: 'Nike',
         price: '$ 342',
         stock: 4,
-        category: 'shoes',
+        category: 'casual',
         detail: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ',
         img: '/assets/img/blue-shoes.jpg'
 
@@ -16,7 +16,7 @@ const data = [
         title: 'Puma',
         price: '$ 145',
         stock: 13,
-        category: 'shoes',
+        category: 'classic',
         detail: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ',
         img: '/assets/img/blue-shoes.jpg'
 
@@ -27,7 +27,7 @@ const data = [
         title: 'Adidas',
         price: '$ 212',
         stock: 11,
-        category: 'shoes',
+        category: 'sport',
         detail: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ',
         img: '/assets/img/blue-shoes.jpg'
 
@@ -45,12 +45,32 @@ const data = [
 }
 
 
+export const getItemByCategory = (cat) =>{
+    return new Promise((resolve, reject)=>{
+        let itemFind = data.filter((item)=>{
+            return item.category === cat
+        })
+    setTimeout(()=>{
+    
+        if(itemFind) resolve(itemFind)
+        else reject(new Error('item not found'))
+    }, 1500)
+     
+})}
 
-export const getSingleItems = () =>{
+
+
+export const getSingleItems = (idItem) =>{
   return new Promise((resolve, reject)=>{
-   setTimeout(()=>{
-       resolve(data[2])
-   }, 2000)
+    let itemFind = data.find((item)=>{
+        return item.id === parseInt(idItem)
+    })
+setTimeout(()=>{
+
+    if(itemFind) resolve(itemFind)
+    else reject(new Error('item not foun'))
+}, 1500)
+ 
   })
 
 }
