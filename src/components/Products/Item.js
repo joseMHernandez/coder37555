@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../Button/Button";
-import ItemCount from "../Button/ItemCount";
 import { Link } from "react-router-dom";
 import "./card.css";
 import '../Button/button.css'
@@ -8,11 +7,9 @@ import '../Button/button.css'
 function Item(props) {
   let { price, title, img, detail, id} = props;
 
-  const urlDetail = `/category/${id}`
+  const urlDetail = `/item/${id}`
   
-const onAdd = () =>{
-    alert(`agregaste este producto al carrito`)
-        }
+
 
         
   return (
@@ -30,7 +27,6 @@ const onAdd = () =>{
       <Button>Ver más</Button>
       </Link>
 
-      <ItemCount stock={15} initial={1} onAdd={onAdd}/>
 
     </div>
   );

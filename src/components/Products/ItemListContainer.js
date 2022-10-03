@@ -5,7 +5,6 @@ import {useParams} from 'react-router-dom'
 import Item from '../Products/Item';
 const ItemListContainer = ()=> {
 
-
 let [data, setdata] = useState([])
 
 const {cat} = useParams()
@@ -37,7 +36,7 @@ console.log()
 return (
     <>
       <div className="main-container">
-
+     
         {
           data.map(({id, price, title, detail, stock, img})=>{
             return( <Item

@@ -10,11 +10,16 @@ function App() {
     <Navbar/>
    <Header/>
    <Routes>
-    <Route path='/category/:id' element={<ItemDetailContainer greeting='this is my webapp'/>}
-    />
+   <Route path='/' element={<ItemListContainer/>}/>
+
    <Route path='/category/:cat' element={<ItemListContainer/>}
     />
-       <Route path='/' element={<ItemListContainer/>}/>
+
+   
+       <Route path='/item/:id' element={<ItemDetailContainer/>}
+    />
+
+
 
 
     <Route path='*' element={<h1>404 Te Perdiste</h1>}/>

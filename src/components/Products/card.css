@@ -3,6 +3,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 .greeting{
   text-align: center;
@@ -44,3 +45,4 @@
   small{
     color: #8c8c8e;
   }
+ 
