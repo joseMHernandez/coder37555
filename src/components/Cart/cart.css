@@ -1,0 +1,11 @@
+.cart-btn{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin-top: 3rem;
+    cursor: pointer;
+    
+
+}

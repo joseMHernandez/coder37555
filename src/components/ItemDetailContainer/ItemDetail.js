@@ -2,19 +2,23 @@ import React from 'react'
 //import Item from "../Products/Item";
 import { useEffect, useState } from "react";
 import { getSingleItems } from '../../services/mockApi';
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import '../ItemDetailContainer/itemList.css'
 import ItemCount from "../Button/ItemCount";
-
+import '../Cart/cart.css'
 const ItemDetail = () => {
 
+  
 let [data, setdata] = useState({})
-
+const [first, setfirst] = useState(false)
 const {id} = useParams()
 
-const onAdd = () =>{
-  alert(`agregaste este producto al carrito`)
-      }
+
+const onAddtoCart = (count) => {
+  alert(`agregaste ${count} productos al carrito`)
+  setfirst(!first)
+}
+      
 useEffect(()=>{
   
     getSingleItems(id).then(dataResponse => setdata(dataResponse))
@@ -35,9 +39,9 @@ useEffect(()=>{
   
     </div>
 
-    <ItemCount stock={15} initial={1} onAdd={onAdd}/>
-
-
+{
+  first === false? <ItemCount stock={15} initial={1} onAddtoCart={onAddtoCart} /> : <Link className='cart-btn' to='/cart'>Finalizar Compra</Link>
+}
 
  
    
