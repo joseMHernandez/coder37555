@@ -4,9 +4,12 @@ import ItemListContainer from './components/Products/ItemListContainer.js';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetail';
 import Cart from './components/Cart/Cart';
+import CartContextProvider from "./context/cartContext";
+
 function App() {
   return (
-    <>
+    <CartContextProvider>
+  
       <BrowserRouter>
     <Navbar/>
    <Header/>
@@ -27,7 +30,8 @@ function App() {
     <Route path='*' element={<h1>404 Te Perdiste</h1>}/>
    </Routes>
       </BrowserRouter>
-    </>
+      </CartContextProvider>
+
   );
 }
 

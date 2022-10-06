@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { cartCtx } from '../../context/cartContext';
+import '../Cart/cart.css'
+function Cart() {
+  const { getTotalItemsInCart } = useContext(cartCtx);
 
-const Cart = () => {
   return (
-    <div>Cart</div>
-  )
+    <div className="cart">
+      <span>X</span>
+      <span>{getTotalItemsInCart()}</span>
+    </div>
+  );
 }
 
-export default Cart
+export default Cart;
