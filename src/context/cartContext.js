@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react";
 
 //1- Importamos y inicializamos nuestro CreateContext
-const cartCtx = createContext();
+export const cartCtx = createContext();
 
 // 2. Definimos nuestro Provider
 export default function CartContextProvider({ children }) {
@@ -26,8 +26,12 @@ export default function CartContextProvider({ children }) {
 
   function getTotalItemsInCart() {
     let total = 0;
-    cart.forEach((item) =>  item);
-    return total;
+    cart.forEach((item) => {
+        return (
+            total = total + 1
+        ) ;
+    } );
+ return total
   }
 
   function isInCart(id) {
@@ -43,4 +47,3 @@ export default function CartContextProvider({ children }) {
   );
 }
 
-export { cartCtx };

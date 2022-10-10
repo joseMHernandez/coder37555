@@ -18,7 +18,7 @@ const {id} = useParams()
 
 
 function handleAddToCart(count) {
-  addItem(item, count);
+  addItem(data, count);
   
   /* Cambiamos el estado del ItemDetail */
 }
@@ -26,6 +26,7 @@ function handleAddToCart(count) {
 const onAddtoCart = (count) => {
   alert(`agregaste ${count} productos al carrito`)
   setfirst(!first)
+  handleAddToCart(count)
 
 }
        
@@ -50,7 +51,8 @@ useEffect(()=>{
     </div>
 
 {
-  !first ? <ItemCount stock={15} initial={1} onAddtoCart={onAddtoCart}  handleAddToCart={handleAddToCart}/> : <Link className='cart-btn' to='/cart'>Compra Finalizada</Link>
+  !first ? <ItemCount stock={15} initial={1} onAddtoCart={onAddtoCart}  /> : 
+  <Link className='cart-btn' to='/cart'>Compra Finalizada</Link>
 }
 
  
