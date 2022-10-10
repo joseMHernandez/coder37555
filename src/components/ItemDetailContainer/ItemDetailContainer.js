@@ -11,21 +11,20 @@ import '../Cart/cart.css'
 const ItemDetail = ({item}) => {
 
   const { addItem } = useContext(cartCtx);
-
+const [isInCart, setisInCart] = useState(false)
 let [data, setdata] = useState({})
-const [first, setfirst] = useState(false)
 const {id} = useParams()
 
 
 function handleAddToCart(count) {
   addItem(data, count);
-  
+  setisInCart(!isInCart)
   /* Cambiamos el estado del ItemDetail */
 }
 
 const onAddtoCart = (count) => {
   alert(`agregaste ${count} productos al carrito`)
-  setfirst(!first)
+  
   handleAddToCart(count)
 
 }
@@ -51,7 +50,7 @@ useEffect(()=>{
     </div>
 
 {
-  !first ? <ItemCount stock={15} initial={1} onAddtoCart={onAddtoCart}  /> : 
+  !isInCart? <ItemCount stock={15} initial={1} onAddtoCart={onAddtoCart}  /> : 
   <Link className='cart-btn' to='/cart'>Compra Finalizada</Link>
 }
 

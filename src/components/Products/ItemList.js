@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./card.css";
 import '../Button/button.css'
 
-function Item(props) {
+function ItemList(props) {
   let { price, title, img, detail, id} = props;
 
   const urlDetail = `/item/${id}`
@@ -32,4 +32,4 @@ function Item(props) {
   );
 }
 
-export default Item;
+export default ItemList;

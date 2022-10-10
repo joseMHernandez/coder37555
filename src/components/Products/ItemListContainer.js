@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { getItems, getItemByCategory} from '../../services/mockApi';
 import {useParams} from 'react-router-dom'
+import ItemList from "./ItemList";
 
-import Item from '../Products/Item';
 const ItemListContainer = ()=> {
 
 let [data, setdata] = useState([])
 
 const {cat} = useParams()
-console.log()
 
    useEffect(()=>{
     if(cat === undefined){
@@ -39,7 +38,7 @@ return (
      
         {
           data.map(({id, price, title, detail, stock, img})=>{
-            return( <Item
+            return( <ItemList
               id={id}
               key={id}
               price={price}
