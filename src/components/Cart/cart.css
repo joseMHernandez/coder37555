@@ -39,4 +39,25 @@
   .cart-detail{
     padding: 1.2rem 0.8rem;
   }
+
+  .logo-count{
+    margin-left: 1rem;
+  }
   
+  .cartview-info{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  
+  }
+
+  .cartview-delete-btn{
+    background-color: red;
+    width: 20rem;
+    display: block;
+    font-size: 1.2rem;
+    color: black;
+    border: none;
+    font-weight: bold;
+  }

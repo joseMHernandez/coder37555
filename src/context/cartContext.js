@@ -28,20 +28,36 @@ export default function CartContextProvider({ children }) {
     let total = 0;
     cart.forEach((item) => {
         return (
-            total = total + 1
+            total += item.count 
         ) ;
     } );
  return total
   }
-
   function isInCart(id) {
     let found = cart.some((item) => item.id === id);
     return found;
   }
 
+
+function emptyCart(){
+  return setCart([])
+}
+
+function deleteItem(id){
+  return setCart(cart.filter(product => product.id !== id))
+
+}
+
+function getTotalItemTotalPrice(){
+  return cart.reduce((acc, item)=> acc += item.price * item.count, 0)
+ 
+}
+
+
+
   return (
     //3. pasamos el objeto Value a los componentes hijos
-    <cartCtx.Provider value={{ cart, addItem, getTotalItemsInCart, isInCart }}>
+    <cartCtx.Provider value={{ cart, addItem, getTotalItemsInCart, isInCart, emptyCart, deleteItem, getTotalItemTotalPrice }}>
       {children}
     </cartCtx.Provider>
   );
