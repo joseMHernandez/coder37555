@@ -44,7 +44,7 @@ useEffect(()=>{
 
    </div>
    <h1>{data.title}</h1>
-   <h1>{data.price}</h1>
+   <h1>${data.price}</h1>
    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </h3>
   
     </div>
