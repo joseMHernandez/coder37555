@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { cartCtx } from '../../context/cartContext';
 import '../Cart/cart.css'
-function Cart() {
-  const { cart, deleteItem, emptyCart} = useContext(cartCtx);
+function CartView() {
+  const { cart, deleteItem, emptyCart, getTotalItemTotalPrice} = useContext(cartCtx);
   
 if(cart.length === 0){
   return <div><h1>tu carrito esta vacio.. <Link to={'/'}>seguir comprando</Link></h1></div>
@@ -41,10 +41,12 @@ if(cart.length === 0){
 
 <div className="total-container">
         <button className="total-empty-btn" onClick={emptyCart} >Vaciar Carrito</button>
-        <button className="total-btn-end" onClick={emptyCart} >Finalizar Compra</button>
+        <button className="total-btn-end" >Finalizar Compra</button>
 
-
+<h2 className="total-price">Total Price: ${getTotalItemTotalPrice()}</h2>
       </div>
+
+      
   
 
     
@@ -57,4 +59,4 @@ if(cart.length === 0){
   );
 }
 
-export default Cart;
+export default CartView;
