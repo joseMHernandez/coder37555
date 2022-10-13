@@ -27,6 +27,8 @@ if(cart.length === 0){
     <span className="cartview-count">Cantidad: {item.count}</span>
     <span className="cartview-detail">{item.detail}</span>
     <button className="cartview-delete-btn" onClick={() =>deleteItem(item.id)}>Delete Item</button>
+
+
   </div>
 </div>
 
@@ -39,6 +41,8 @@ if(cart.length === 0){
 
 <div className="total-container">
         <button className="total-empty-btn" onClick={emptyCart} >Vaciar Carrito</button>
+        <button className="total-btn-end" onClick={emptyCart} >Finalizar Compra</button>
+
 
       </div>
   
