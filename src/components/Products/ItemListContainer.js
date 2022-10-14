@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getItems, getItemByCategory} from '../../services/mockApi';
+import { getData, getItemByCategory} from '../../services/firestore';
 import {useParams} from 'react-router-dom'
 import ItemList from "./ItemList";
 
@@ -11,7 +11,7 @@ const {cat} = useParams()
 
    useEffect(()=>{
     if(cat === undefined){
-      getItems().then(dataResponse => setdata(dataResponse))
+      getData().then(dataResponse => setdata(dataResponse))
 
     }else{
       getItemByCategory(cat).then(dataResponse => setdata(dataResponse))

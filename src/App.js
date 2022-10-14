@@ -5,8 +5,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import CartContextProvider from "./context/cartContext";
 import CartView from './components/Cart/CartView';
+import { exportDataToFirestore } from './services/firestore';
+import { useEffect } from 'react';
 
 function App() {
+
+
+  useEffect(() => {
+    exportDataToFirestore()
+  }, [])
+
+
+
+
   return (
     <CartContextProvider>
   
