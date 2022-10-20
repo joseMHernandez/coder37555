@@ -1,18 +1,20 @@
 import React from 'react'
 //import Item from "../Products/Item";
 import { useEffect, useState, useContext } from "react";
-import { getSingleItems } from '../../services/mockApi';
+import { getSingleItems } from '../../services/firestore';
 import {Link, useParams} from 'react-router-dom'
 import '../ItemDetailContainer/itemList.css'
 import ItemCount from "../Button/ItemCount";
 import { cartCtx } from "../../context/cartContext";
 
 import '../Cart/cart.css'
-const ItemDetail = ({item}) => {
+const ItemDetailContainer = ({item}) => {
 
   const { addItem } = useContext(cartCtx);
 const [isInCart, setisInCart] = useState(false)
-let [data, setdata] = useState({})
+
+
+const [data, setdata] = useState({})
 const {id} = useParams()
 
 
@@ -35,9 +37,15 @@ useEffect(()=>{
 
   
 }, [id])
+
+
+
+
   
   return (
     <>
+
+    
     <div className="main-detail">
     <div className='item-detail'>
    <img src={data.img} alt={data.title} />
@@ -62,4 +70,4 @@ useEffect(()=>{
   )
 }
 
-export default ItemDetail
+export default ItemDetailContainer

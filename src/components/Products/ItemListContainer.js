@@ -5,7 +5,7 @@ import ItemList from "./ItemList";
 
 const ItemListContainer = ()=> {
 
-let [data, setdata] = useState([])
+const [data, setdata] = useState([])
 
 const {cat} = useParams()
 

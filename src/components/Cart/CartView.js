@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { cartCtx } from '../../context/cartContext';
+import Button from "../Button/Button";
 import '../Cart/cart.css'
 function CartView() {
   const { cart, deleteItem, emptyCart, getTotalItemTotalPrice} = useContext(cartCtx);
@@ -10,8 +11,7 @@ if(cart.length === 0){
 }
   return (
     <>
-     
-      {
+    {
         cart.map(item=>{
           return (
           <div className="cart-item" key={item.id}>
@@ -60,3 +60,6 @@ if(cart.length === 0){
 }
 
 export default CartView;
+
+
+

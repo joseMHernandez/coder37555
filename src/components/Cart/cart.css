@@ -61,3 +61,19 @@
     border: none;
     font-weight: bold;
   }
+
+  .cartList{
+    border-spacing: 0;
+    width: 35%;
+    margin: 1.5rem auto;
+    text-align: center;
+  }
+  
+  .cartList_head{
+    background-color: #f582b9;
+    margin: .8rem auto;
+  }
+  
+  .cartList_row{
+    line-height: 4rem;
+  }
